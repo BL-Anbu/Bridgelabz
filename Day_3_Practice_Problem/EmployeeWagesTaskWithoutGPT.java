@@ -2,7 +2,7 @@ package Day_3_Practice_Problem;
 
 import java.util.Scanner;
 
-public class EmployeeWagesTask {
+public class EmployeeWagesTaskWithoutGPT {
 
     //UC1 --- Check Employee is Present or Absent
     //UC2 --- Calculate Daily Employee Wage
@@ -20,7 +20,7 @@ public class EmployeeWagesTask {
     private final static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        EmployeeWagesTask employeeWagesTask = new EmployeeWagesTask();
+        EmployeeWagesTaskWithoutGPT employeeWagesTask = new EmployeeWagesTaskWithoutGPT();
         employeeWagesTask.runApplication();
     }
 
