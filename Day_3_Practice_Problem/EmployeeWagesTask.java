@@ -29,19 +29,21 @@ public class EmployeeWagesTask {
         Employee emp = fileEmployeeInfo();
         System.out.println(emp.toString());
 
-        useCaseImplementaion(emp);
+        useCaseImplementaionUsingSwitchCase(emp);
 
 
     }
 
-    private void useCaseImplementaion(Employee emp) {
+    //UC4 --- Solving using Switch Case Statement
+    private void useCaseImplementaionUsingSwitchCase(Employee emp) {
         boolean run = Boolean.TRUE;
         while(run){
             int expression=printUseCase();
             switch (expression) {
-                case 0:
+                case 0,7:
                     run=Boolean.FALSE;
                     break;
+                //UC1 --- Check Employee is Present or Absent
                 case 1:
                     if(emp.isPresent()){
                         System.out.println("Employee is Present");
@@ -49,31 +51,59 @@ public class EmployeeWagesTask {
                         System.out.println("Employee is Absent");
                     }
                     break;
+                //UC2 --- Calculate Daily Employee Wage
+                //       - Assume Wage per Hour is 20
+                //       - Assume Full Day Hour is 8
                 case 2:
-                    System.out.println("Case 1");
-                    System.out.println("Enter a UseCase to Check 0-6");
+                    calculateFullTimeEmployeeWages(emp);
                     break;
+                //UC3 --- Add Part time Employee & Wage
+                //       - Assume Part time Hour is 8
                 case 3:
-                    System.out.println("Case 1");
+                    calculatePartTimeEmployeeWages(emp);
                     break;
                 case 4:
-                    System.out.println("Case 1");
+                    System.out.println("This system is running Switch Case Statement");
                     break;
+                //UC5 --- Calculating Wages for a Month
+                //       - Assume 20 Working Day per Month
                 case 5:
-                    System.out.println("Case 1");
+                    calculateEmployeeWagesForMonth(emp);
                     break;
                 case 6:
-                    System.out.println("Case 1");
+                    System.out.println("Case 6");
+                    break;
+                default:
+                    System.out.println("Enter upto 0 to 7 only ");
                     break;
             }
         }
     }
 
-    private void getEmployeeAttendence(Employee emp) {
-        fileEmployeeInfo();
+    //UC5 --- Calculating Wages for a Month
+    //       - Assume 20 Working Day per Month
+    private void calculateEmployeeWagesForMonth(Employee emp) {
+        int num=emp.getWagesPerHour()* emp.getOneDayPartTimeHours()*emp.getOneDayPartTimeHours()*emp.getWorkingDaysPerMonth();
+        System.out.println("Monthly Employee Wage based on the Employee input of Part Time and Full Time work is " + num);
+
     }
 
-    private int printUseCase() {
+    //UC3 --- Add Part time Employee & Wage
+    //       - Assume Part time Hour is 8
+    private void calculatePartTimeEmployeeWages(Employee emp) {
+        int num=emp.getWagesPerHour()* emp.getOneDayPartTimeHours();
+        System.out.println("The Daily Employee Wage based on the Employee input of Part Time work per day is " + num);
+    }
+
+    //UC2 --- Calculate Daily Employee Wage
+    //       - Assume Wage per Hour is 20
+    //       - Assume Full Day Hour is 8
+    private void calculateFullTimeEmployeeWages(Employee emp) {
+        int num=emp.getWagesPerHour()* emp.getOneDayTotalHours();
+        System.out.println("The Daily Employee Wage based on the Employee input of Full Time work per day is " + num);
+    }
+
+    private int  printUseCase() {
         System.out.println("----------------------------********************************----------------------------");
         System.out.println("UC 1 : Check Employee is Present or Absent");
         System.out.println("UC 2 : Calculate Daily Employee Wage");
@@ -82,6 +112,7 @@ public class EmployeeWagesTask {
         System.out.println("UC 5 : Calculating Wages for a Month");
         System.out.println("UC 6 : Calculate Wages till a condition of total" +
                 " working hours or days is reached for a month");
+        System.out.println("UC 7 : For Exit press 0 or 7");
         System.out.println("----------------------------********************************----------------------------");
         System.out.print("Enter the UC : ");
         return sc.nextInt();
