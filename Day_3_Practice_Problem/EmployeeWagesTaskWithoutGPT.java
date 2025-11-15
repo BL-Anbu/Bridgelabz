@@ -37,61 +37,68 @@ public class EmployeeWagesTaskWithoutGPT {
     //UC4 --- Solving using Switch Case Statement
     private void useCaseImplementaionUsingSwitchCase(Employee emp) {
         boolean run = Boolean.TRUE;
-        while(run){
-            int expression=printUseCase();
-            switch (expression) {
-                case 0,7:
-                    run=Boolean.FALSE;
-                    break;
-                //UC1 --- Check Employee is Present or Absent
-                case 1:
-                    if(emp.isPresent()){
-                        System.out.println("Employee is Present");
-                    }else{
-                        System.out.println("Employee is Absent");
-                    }
-                    break;
-                //UC2 --- Calculate Daily Employee Wage
-                //       - Assume Wage per Hour is 20
-                //       - Assume Full Day Hour is 8
-                case 2:
-                    calculateFullTimeEmployeeWages(emp);
-                    break;
-                //UC3 --- Add Part time Employee & Wage
-                //       - Assume Part time Hour is 8
-                case 3:
-                    calculatePartTimeEmployeeWages(emp);
-                    break;
-                case 4:
-                    System.out.println("This system is running Switch Case Statement");
-                    break;
-                //UC5 --- Calculating Wages for a Month
-                //       - Assume 20 Working Day per Month
-                case 5:
-                    calculateEmployeeWagesForMonth(emp);
-                    break;
-                case 6:
-                    System.out.println("Case 6");
-                    break;
-                default:
-                    System.out.println("Enter upto 0 to 7 only ");
-                    break;
+        try {
+            while (run) {
+                int expression = printUseCase();
+
+                switch (expression) {
+                    case 0, 7:
+                        run = Boolean.FALSE;
+                        break;
+                    //UC1 --- Check Employee is Present or Absent
+                    case 1:
+                        if (emp.isPresent()) {
+                            System.out.println("Employee is Present");
+                        } else {
+                            System.out.println("Employee is Absent");
+                        }
+                        break;
+                    //UC2 --- Calculate Daily Employee Wage
+                    //       - Assume Wage per Hour is 20
+                    //       - Assume Full Day Hour is 8
+                    case 2:
+                        calculateFullTimeEmployeeWages(emp);
+                        break;
+                    //UC3 --- Add Part time Employee & Wage
+                    //       - Assume Part time Hour is 8
+                    case 3:
+                        calculatePartTimeEmployeeWages(emp);
+                        break;
+                    case 4:
+                        System.out.println("This system is running Switch Case Statement");
+                        break;
+                    //UC5 --- Calculating Wages for a Month
+                    //       - Assume 20 Working Day per Month
+                    case 5:
+                        calculateEmployeeWagesForMonth(emp);
+                        break;
+                    case 6:
+                        System.out.println("Case 6");
+                        break;
+                    default:
+                        System.out.println("Enter upto 0 to 7 only ");
+                        break;
+                }
             }
+        } catch (NumberFormatException e) {
+            System.out.print("Please enter a valid number: ");
         }
     }
 
     //UC5 --- Calculating Wages for a Month
     //       - Assume 20 Working Day per Month
     private void calculateEmployeeWagesForMonth(Employee emp) {
-        int num=emp.getWagesPerHour()* emp.getOneDayPartTimeHours()*emp.getOneDayPartTimeHours()*emp.getWorkingDaysPerMonth();
-        System.out.println("Monthly Employee Wage based on the Employee input of Part Time and Full Time work is " + num);
+        int monthlyWagesFullTime= emp.getWagesPerHour() * emp.getOneDayTotalHours() * emp.getWorkingDaysPerMonth();
+        int monthlyWagesPartTime= emp.getWagesPerHour() * emp.getOneDayPartTimeHours() * emp.getWorkingDaysPerMonth();
+        System.out.println("Monthly Employee Wage based on the Employee input of Full Time work is "
+                + monthlyWagesFullTime + " Part Time work is " + monthlyWagesPartTime);
 
     }
 
     //UC3 --- Add Part time Employee & Wage
     //       - Assume Part time Hour is 8
     private void calculatePartTimeEmployeeWages(Employee emp) {
-        int num=emp.getWagesPerHour()* emp.getOneDayPartTimeHours();
+        int num = emp.getWagesPerHour() * emp.getOneDayPartTimeHours();
         System.out.println("The Daily Employee Wage based on the Employee input of Part Time work per day is " + num);
     }
 
@@ -99,11 +106,11 @@ public class EmployeeWagesTaskWithoutGPT {
     //       - Assume Wage per Hour is 20
     //       - Assume Full Day Hour is 8
     private void calculateFullTimeEmployeeWages(Employee emp) {
-        int num=emp.getWagesPerHour()* emp.getOneDayTotalHours();
+        int num = emp.getWagesPerHour() * emp.getOneDayTotalHours();
         System.out.println("The Daily Employee Wage based on the Employee input of Full Time work per day is " + num);
     }
 
-    private int  printUseCase() {
+    private int printUseCase() {
         System.out.println("----------------------------********************************----------------------------");
         System.out.println("UC 1 : Check Employee is Present or Absent");
         System.out.println("UC 2 : Calculate Daily Employee Wage");
