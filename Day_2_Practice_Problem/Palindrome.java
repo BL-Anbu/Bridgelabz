@@ -1,3 +1,5 @@
+package Day_2_Practice_Problem;
+
 import java.util.Scanner;
 
 public class Palindrome {
@@ -12,9 +14,9 @@ public class Palindrome {
         }
 
         if (temp == rev)
-            System.out.println(temp + " is a Palindrome");
+            System.out.println(temp + " is a Day_2_Practice_Problem.Palindrome");
         else
-            System.out.println(temp + " is NOT a Palindrome");
+            System.out.println(temp + " is NOT a Day_2_Practice_Problem.Palindrome");
         sc.close();
     }
 }

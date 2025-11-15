@@ -1,17 +1,20 @@
+package Day_2_Practice_Problem;
+
 import java.util.Scanner;
 
-public class SumNaturalFor {
+public class SumNaturalWhile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter N: ");
         int n = sc.nextInt();
-        int sum = 0;
+        int i = 1, sum = 0;
 
-        for (int i = 1; i <= n; i++) {
+        while (i <= n) {
             sum += i;
+            i++;
         }
 
-        System.out.println("Sum = " + sum);
+        System.out.println("Sum of first " + n + " natural numbers = " + sum);
         sc.close();
     }
 }

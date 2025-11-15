@@ -1,3 +1,5 @@
+package Day_2_Practice_Problem;
+
 import java.util.Scanner;
 
 public class Quadratic {

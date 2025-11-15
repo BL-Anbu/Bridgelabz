@@ -1,3 +1,5 @@
+package Day_2_Practice_Problem;
+
 import java.util.Scanner;
 
 public class Distance {
@@ -8,7 +10,7 @@ public class Distance {
         int y = sc.nextInt();
 
         double dist = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
-        System.out.println("Distance from origin = " + dist);
+        System.out.println("Day_2_Practice_Problem.Distance from origin = " + dist);
         sc.close();
     }
 }
