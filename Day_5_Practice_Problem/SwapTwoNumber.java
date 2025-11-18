@@ -16,7 +16,7 @@ public class SwapTwoNumber {
         n = n + m;
         m = n - m;
         n = n - m;
-        System.out.println("Before Swap \n N is " + n + " and M is " + m);
+        System.out.println("After Swap \n N is " + n + " and M is " + m);
 
     }
 
