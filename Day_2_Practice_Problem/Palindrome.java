@@ -14,9 +14,9 @@ public class Palindrome {
         }
 
         if (temp == rev)
-            System.out.println(temp + " is a Day_2_Practice_Problem.Palindrome");
+            System.out.println(temp + " is a Palindrome");
         else
-            System.out.println(temp + " is NOT a Day_2_Practice_Problem.Palindrome");
+            System.out.println(temp + " is NOT a Palindrome");
         sc.close();
     }
 }
