@@ -1,6 +1,5 @@
 package Day_5_Practice_Problem.FunctionalProgram;
 
-import javax.security.sasl.SaslClient;
 import java.util.Scanner;
 
 public class TwoDArrays {
