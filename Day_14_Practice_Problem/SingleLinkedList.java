@@ -120,7 +120,7 @@ public class SingleLinkedList {
             prepend(value);
             return true;
         }
-        if (index == length) {
+        if (index == length - 1) {
             append(value);
             return true;
         }
@@ -135,11 +135,12 @@ public class SingleLinkedList {
     public Node remove(int index) {
         if (index < 0 || index >= length) return null;
         if (index == 0) removeFirst();
-        if (index == length) removeLast();
+        if (index == length - 1) removeLast();
         Node prev = get(index - 1);
-        Node temp=get(index);
-        prev.next=temp.next;
+        Node temp = get(index);
+        prev.next = temp.next;
         temp.next = null;
+        length--;
         return temp;
     }
 
