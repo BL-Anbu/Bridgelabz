@@ -1,6 +1,4 @@
-package Day_14_Practice_Problem.InterviewProblem;
-
-import Day_14_Practice_Problem.*;
+package Day_14_Practice_Problem_Data_Structures.InterviewProblem;
 
 
 public class SingleLinkedList {

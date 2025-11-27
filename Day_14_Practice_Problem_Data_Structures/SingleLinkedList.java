@@ -1,4 +1,4 @@
-package Day_14_Practice_Problem;
+package Day_14_Practice_Problem_Data_Structures;
 
 public class SingleLinkedList {
 

@@ -1,4 +1,4 @@
-package Day_14_Practice_Problem;
+package Day_14_Practice_Problem_Data_Structures;
 
 public class SLLMain {
 
@@ -22,7 +22,7 @@ public class SLLMain {
         myLinkedList.printList();
         System.out.println("\ninsert value by Index: " + myLinkedList.insert(1,11));
         myLinkedList.printList();
-        System.out.println("\ndelete value by Index: " + myLinkedList.remove(1).value);
+        System.out.println("\ndelete value by Index: " + myLinkedList.remove(3).value);
 
         myLinkedList.printList();
 
