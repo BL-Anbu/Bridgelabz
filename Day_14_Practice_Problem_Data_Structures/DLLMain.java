@@ -1,4 +1,4 @@
-package Day_14_Practice_Problem;
+package Day_14_Practice_Problem_Data_Structures;
 
 public class DLLMain {
 
@@ -40,6 +40,22 @@ public class DLLMain {
             myDLL.getTail();
             myDLL.getLength();
 
+            System.out.println("\nget value by Index : " + myDLL.get(4).value);
+
+            System.out.println("\nset value by Index: " + myDLL.set(2,12));
+            myDLL.printList();
+
+            System.out.println("\ninsert value by Index: " + myDLL.insert(2,11));
+            myDLL.printList();
+            myDLL.getHead();
+            myDLL.getTail();
+            myDLL.getLength();
+
+            System.out.println("\ndelete value by Index: " + myDLL.remove(3).value);
+            myDLL.printList();
+            myDLL.getHead();
+            myDLL.getTail();
+            myDLL.getLength();
 
     }
 }
