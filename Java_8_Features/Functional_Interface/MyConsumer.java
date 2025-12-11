@@ -11,7 +11,7 @@ package Java_8_Features.Functional_Interface;
 */
 
 @FunctionalInterface
-interface MyConsumer<T> {
+public interface MyConsumer<T> {
     void accept(T t);
 }
 

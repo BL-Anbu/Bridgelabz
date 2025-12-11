@@ -10,6 +10,6 @@ package Java_8_Features.Functional_Interface;
  */
 
 @FunctionalInterface
-interface MyPredicate<T> {
+public interface MyPredicate<T> {
     boolean test(T t);
 }

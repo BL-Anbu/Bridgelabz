@@ -9,6 +9,6 @@ package Java_8_Features.Functional_Interface;
             Mapping operations in Streams
 */
 @FunctionalInterface
-interface MyFunction<T, R> {
+public interface MyFunction<T, R> {
     R apply(T t);
 }

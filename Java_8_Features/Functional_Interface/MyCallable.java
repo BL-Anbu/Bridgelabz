@@ -1,7 +1,7 @@
 package Java_8_Features.Functional_Interface;
 
 @FunctionalInterface
-interface MyCallable<V> {
+public interface MyCallable<V> {
     V call() throws Exception;
 }
 

@@ -9,6 +9,6 @@ package Java_8_Features.Functional_Interface;
 */
 
 @FunctionalInterface
-interface MyRunnable {
+public interface MyRunnable {
     void run();
 }

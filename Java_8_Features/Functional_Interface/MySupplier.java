@@ -10,7 +10,7 @@ package Java_8_Features.Functional_Interface;
  */
 
 @FunctionalInterface
-interface MySupplier<R> {
+public interface MySupplier<R> {
     R get();
 }
 
