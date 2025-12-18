@@ -14,7 +14,7 @@
 - REST APIs | Kafka (basic)
 
 ## 📊 GitHub Stats
-![Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true)
+![Stats](https://github-readme-stats.vercel.app/api?username=anbu-15&show_icons=true)
 
 ## 🔥 Streak
 ![Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME)
