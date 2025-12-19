@@ -145,53 +145,52 @@ public class MyStream<T> {
 //    min(), max()
 //    anyMatch(), allMatch(), noneMatch()
 
-    public void forEach(MyConsumer<T> consumer) {
-        for (T item : data) {
+    public void forEach(MyConsumer<T> consumer){
+        for(T item : data){
             consumer.accept(item);
         }
     }
 
-    public List<T> collect() {
+    public List<T> collect(){
         return new ArrayList<>(data);
     }
 
-    public long count() {
+    public long count(){
         return data.size();
     }
 
-    public T findFirst() {
-        return data.isEmpty() ? null : data.get(0);
+    public T findFirst(){
+        return data.isEmpty()?null:data.get(0);
     }
 
-    public boolean anyMatch(MyPredicate<T> predicate) {
-        for (T item : data) {
-            if (predicate.test(item)) return true;
+    public boolean anyMatch(MyPredicate<T> predicate){
+        for (T item : data){
+            if(predicate.test(item)) return true;
         }
         return false;
     }
 
-    public boolean allMatch(MyPredicate<T> predicate) {
-        for (T item : data) {
-            if (!predicate.test(item)) return false;
+    public boolean allMatch(MyPredicate<T> predicate){
+        for(T item : data){
+            if(!predicate.test(item)) return false;
         }
         return true;
     }
 
-    public boolean noneMatch(MyPredicate<T> predicate) {
-        for (T item : data) {
-            if (predicate.test(item)) return false;
+    public boolean noneMatch(MyPredicate<T> predicate){
+        for(T item : data){
+            if(predicate.test(item)) return false;
         }
         return true;
     }
 
-    public T reduce(T identity, MyBinaryOperator operator) {
+    public T reduce(T identity, MyBinaryOperator operator){
         T result = identity;
-        for (T item : data) {
+        for(T item : data){
             result = (T) operator.apply(result, item);
         }
         return result;
     }
-
     public T min(Comparator<T> comparator) {
         if (data.isEmpty()) return null;
 
@@ -203,7 +202,6 @@ public class MyStream<T> {
         }
         return min;
     }
-
     public T max(Comparator<T> comparator) {
         if (data.isEmpty()) return null;
 
