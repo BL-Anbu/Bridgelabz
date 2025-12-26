@@ -9,15 +9,14 @@
 - 💬 Ask me about Java, JVM, SQL
 
 ## 🛠️ Tech Stack
-- Java | Spring Boot | Hibernate
-- MySQL | Git | Docker
-- REST APIs | Kafka (basic)
+- Java | Java 8 | Spring | Spring Boot | Hibernate
+- MySQL | Git | Github | BitBucket | Docker
+- REST APIs | Jenkins | Kafka (basic)
 
 ## 📊 GitHub Stats
 ![Stats](https://github-readme-stats.vercel.app/api?username=anbu-15&show_icons=true)
 
 ## 🔥 Streak
-![Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME)
-
+![Streak](https://github-readme-streak-stats.herokuapp.com/?user=anbu-15)
 ## 📫 Connect with Me
 - LinkedIn: [linkedin.com/in/anbarasu-a-623a05249](https://www.linkedin.com/in/anbarasu-a-623a05249/)
