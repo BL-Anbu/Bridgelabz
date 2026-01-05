@@ -1,10 +1,10 @@
-package Day27_Practice_problem.addressbook;
+package Day27_28_Practice_problem.addressbook;
 import java.io.*;
 import java.util.List;
 
 public class FileIOService {
 
-    private static final String FILE_NAME = "Day27_Practice_problem/addressbook/files/addressbook.txt";
+    private static final String FILE_NAME = "Day27_28_Practice_problem/addressbook/files/addressbook.txt";
 
     public void writeToFile(List<ContactPerson> contacts) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_NAME))) {
