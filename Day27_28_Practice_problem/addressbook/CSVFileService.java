@@ -1,4 +1,4 @@
-package Day27_Practice_problem.addressbook;
+package Day27_28_Practice_problem.addressbook;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.util.List;
 
 public class CSVFileService {
 
-    private static final String CSV_FILE = "Day27_Practice_problem/addressbook/files/addressbook.csv";
+    private static final String CSV_FILE = "Day27_28_Practice_problem/addressbook/files/addressbook.csv";
 
     public void writeCSV(List<ContactPerson> contacts) {
         try (CSVWriter writer = new CSVWriter(new FileWriter(CSV_FILE))) {

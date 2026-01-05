@@ -1,4 +1,4 @@
-package Day27_Practice_problem.addressbook;
+package Day27_28_Practice_problem.addressbook;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.*;
@@ -7,7 +7,7 @@ import java.util.List;
 
 public class JSONFileService {
 
-    private static final String JSON_FILE = "Day27_Practice_problem/addressbook/files/addressbook.json";
+    private static final String JSON_FILE = "Day27_28_Practice_problem/addressbook/files/addressbook.json";
     private Gson gson = new Gson();
 
     public void writeJSON(List<ContactPerson> contacts) {
