@@ -45,6 +45,14 @@ public class ContactPerson {
         return zip;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     // UC6 – Duplicate Check using Name
     @Override
     public boolean equals(Object o) {

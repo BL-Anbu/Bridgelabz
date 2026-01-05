@@ -9,61 +9,46 @@ public class AddressBook {
 
     private List<ContactPerson> contacts = new ArrayList<>();
 
-    // UC1 – Add Contact
     public void addContact(ContactPerson person) {
-        if (contacts.stream().anyMatch(p -> p.equals(person))) {
-            System.out.println("Duplicate Contact Not Allowed!");
+        if (contacts.contains(person)) {
+            System.out.println("Duplicate contact not allowed!");
             return;
         }
         contacts.add(person);
     }
 
-    // UC2 – Edit Contact
-    public void editContact(String firstName, String lastName, ContactPerson updated) {
-        contacts.stream()
-                .filter(p -> p.getFirstName().equalsIgnoreCase(firstName)
-                        && p.getLastName().equalsIgnoreCase(lastName))
-                .findFirst()
-                .ifPresent(p -> {
-                    contacts.remove(p);
-                    contacts.add(updated);
-                });
-    }
-
-    // UC3 – Delete Contact
-    public void deleteContact(String firstName, String lastName) {
-        contacts.removeIf(p ->
-                p.getFirstName().equalsIgnoreCase(firstName)
-                        && p.getLastName().equalsIgnoreCase(lastName));
-    }
-
-    // UC7 – Search by City or State
-    public List<ContactPerson> searchByCityOrState(String value) {
-        return contacts.stream()
-                .filter(p -> p.getCity().equalsIgnoreCase(value)
-                        || p.getState().equalsIgnoreCase(value))
-                .collect(Collectors.toList());
+    public List<ContactPerson> getContacts() {
+        return contacts;
     }
 
     // UC10 – Sort by Name
     public void sortByName() {
-        contacts.sort(Comparator.comparing(ContactPerson::getFirstName));
+        contacts = contacts.stream()
+                .sorted(Comparator.comparing(ContactPerson::getFirstName)
+                        .thenComparing(ContactPerson::getLastName))
+                .collect(Collectors.toList());
+
+        contacts.forEach(System.out::println);
     }
 
-    // UC11 – Sort by City / State / Zip
+    // UC11 – Sort by City
     public void sortByCity() {
-        contacts.sort(Comparator.comparing(ContactPerson::getCity));
+        contacts.stream()
+                .sorted(Comparator.comparing(ContactPerson::getCity))
+                .forEach(System.out::println);
     }
 
+    // UC11 – Sort by State
     public void sortByState() {
-        contacts.sort(Comparator.comparing(ContactPerson::getState));
+        contacts.stream()
+                .sorted(Comparator.comparing(ContactPerson::getState))
+                .forEach(System.out::println);
     }
 
+    // UC11 – Sort by Zip
     public void sortByZip() {
-        contacts.sort(Comparator.comparing(ContactPerson::getZip));
-    }
-
-    public List<ContactPerson> getContacts() {
-        return contacts;
+        contacts.stream()
+                .sorted(Comparator.comparing(ContactPerson::getZip))
+                .forEach(System.out::println);
     }
 }
