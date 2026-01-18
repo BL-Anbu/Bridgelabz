@@ -15,7 +15,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     }
 
 
-    public static void createEmployeeTable() {
+    public void createEmployeeTable() {
 
         String createTableSQL =
                 "CREATE TABLE IF NOT EXISTS employee (" +

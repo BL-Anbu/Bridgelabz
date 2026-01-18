@@ -2,13 +2,10 @@ package JDBC;
 
 import java.util.List;
 
-import static JDBC.EmployeeDAOImpl.createEmployeeTable;
-
 public class JdbcMain {
 
     public static void main(String[] args) {
 
-        createEmployeeTable();
         EmployeeDAO dao = new EmployeeDAOImpl();
 
         dao.addEmployee(new Employee("Anbu", 50000));
