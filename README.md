@@ -31,4 +31,10 @@
 
 //   (junit.commons) // junit // 5.0.0
 
+//   <dependency>
+//    <groupId>com.mysql</groupId>
+//    <artifactId>mysql-connector-j</artifactId>
+//    <version>8.3.0</version>
+//   </dependency>
+
 // Add this dependency in the settings -> project structures -> Libraries
