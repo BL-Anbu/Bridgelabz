@@ -1,0 +1,175 @@
+console.log("===== ARRAY & MAP PRACTICE PROBLEMS =====");
+
+// -------------------------------------------------
+// ARRAY PRACTICE PROBLEMS
+// -------------------------------------------------
+
+// Generate 10 random 3-digit numbers and find 2nd largest & smallest (WITHOUT sorting)
+function secondLargestSmallestWithoutSort() {
+    let arr = [];
+
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 900) + 100);
+    }
+
+    let largest = -Infinity, secondLargest = -Infinity;
+    let smallest = Infinity, secondSmallest = Infinity;
+
+    for (let num of arr) {
+        if (num > largest) {
+            secondLargest = largest;
+            largest = num;
+        } else if (num > secondLargest && num !== largest) {
+            secondLargest = num;
+        }
+
+        if (num < smallest) {
+            secondSmallest = smallest;
+            smallest = num;
+        } else if (num < secondSmallest && num !== smallest) {
+            secondSmallest = num;
+        }
+    }
+
+    console.log("Array:", arr);
+    console.log("2nd Largest:", secondLargest);
+    console.log("2nd Smallest:", secondSmallest);
+}
+
+// Sort array and find 2nd largest & smallest
+function secondLargestSmallestWithSort() {
+    let arr = [];
+
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 900) + 100);
+    }
+
+    arr.sort((a, b) => a - b);
+
+    console.log("Sorted Array:", arr);
+    console.log("2nd Smallest:", arr[1]);
+    console.log("2nd Largest:", arr[arr.length - 2]);
+}
+
+//  Prime Factorization stored in array
+function primeFactorsToArray(n) {
+    let factors = [];
+
+    for (let i = 2; i * i <= n; i++) {
+        while (n % i === 0) {
+            factors.push(i);
+            n /= i;
+        }
+    }
+    if (n > 1) factors.push(n);
+
+    console.log("Prime Factors:", factors);
+}
+
+// Sum of three integers equals ZERO
+function sumOfThreeZero() {
+    let arr = [-1, 0, 1, 2, -2, -3, 3];
+    let result = [];
+
+    for (let i = 0; i < arr.length - 2; i++) {
+        for (let j = i + 1; j < arr.length - 1; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] === 0) {
+                    result.push([arr[i], arr[j], arr[k]]);
+                }
+            }
+        }
+    }
+
+    console.log("Triplets with sum zero:", result);
+}
+
+//  Repeated digits between 0–100
+function repeatedDigits() {
+    let repeated = [];
+
+    for (let i = 11; i <= 99; i += 11) {
+        repeated.push(i);
+    }
+
+    console.log("Repeated digits:", repeated);
+}
+
+// -------------------------------------------------
+// MAP PRACTICE PROBLEMS
+// -------------------------------------------------
+
+//  Dice roll till any number reaches 10 times
+function diceRollMap() {
+    let diceMap = new Map();
+
+    for (let i = 1; i <= 6; i++) {
+        diceMap.set(i, 0);
+    }
+
+    let maxCount = 0;
+    let maxNumber = 0;
+
+    while (maxCount < 10) {
+        let roll = Math.floor(Math.random() * 6) + 1;
+        diceMap.set(roll, diceMap.get(roll) + 1);
+
+        if (diceMap.get(roll) > maxCount) {
+            maxCount = diceMap.get(roll);
+            maxNumber = roll;
+        }
+    }
+
+    let minNumber = [...diceMap.entries()].reduce((a, b) =>
+        a[1] < b[1] ? a : b
+    )[0];
+
+    console.log("Dice Map:", diceMap);
+    console.log("Max rolled number:", maxNumber);
+    console.log("Min rolled number:", minNumber);
+}
+
+//  Birth month of 50 individuals (1992–1993)
+function birthMonthMap() {
+    let monthMap = new Map();
+
+    for (let i = 1; i <= 12; i++) {
+        monthMap.set(i, []);
+    }
+
+    for (let i = 1; i <= 50; i++) {
+        let month = Math.floor(Math.random() * 12) + 1;
+        monthMap.get(month).push(i);
+    }
+
+    console.log("Birth Month Map:");
+    for (let [month, people] of monthMap) {
+        if (people.length > 0) {
+            console.log(`Month ${month}:`, people);
+        }
+    }
+}
+
+// -------------------------------------------------
+// MAIN EXECUTION
+// -------------------------------------------------
+
+secondLargestSmallestWithoutSort();
+console.log("----------------------");
+
+secondLargestSmallestWithSort();
+console.log("----------------------");
+
+primeFactorsToArray(56);
+console.log("----------------------");
+
+sumOfThreeZero();
+console.log("----------------------");
+
+repeatedDigits();
+console.log("----------------------");
+
+diceRollMap();
+console.log("----------------------");
+
+birthMonthMap();
