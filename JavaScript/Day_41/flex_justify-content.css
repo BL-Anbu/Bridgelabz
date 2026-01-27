@@ -1,0 +1,164 @@
+.parent {
+    background-color: rgb(241, 207, 16);
+    padding: 100px;
+    /* margin-top: 100px; */
+    margin-left: 100px;
+    padding-top: 50px;
+    width: 1400px;
+    height: 100%;
+    display: inline-block;
+
+}
+
+.parent-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+
+}
+
+.parent-container1 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.parent-container2 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.parent-container3 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.parent-container4 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.parent-container5 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.parent-container6 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+.end {
+    font-size: 30px;
+    text-align: center;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.mid {
+    top: 10px;
+    height: 100px;
+    font-size: larger;
+}
+
+.justify-content {
+    text-align: center;
+    font-size: 25px;
+}
+
+.container1 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: flex-start;
+    border-radius: 20px;
+}
+
+.container2 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: flex-end;
+    border-radius: 20px;
+}
+
+.container3 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.container4 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+.container5 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-around;
+    border-radius: 20px;
+}
+
+.container6 {
+    top: 10px;
+    display: flex;
+    height: 50px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}

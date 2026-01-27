@@ -1,0 +1,109 @@
+.parent {
+    background-color: rgb(241, 207, 16);
+    padding: 100px;
+    /* margin-top: 100px; */
+    margin-left: 100px;
+    padding-top: 50px;
+    width: 1400px;
+    height: 130%;
+    /* display: inline-block; */
+
+}
+
+.parent-container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+ align-items: center;
+}
+
+.parent-container1 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+     align-items: center;
+}
+
+.parent-container2 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+     align-items: center;
+}
+
+.parent-container3 {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.end {
+    font-size: 30px;
+    text-align: center;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+}
+
+.mid {
+    top: 10px;
+    height: 100px;
+    font-size: larger;
+}
+
+.justify-content {
+    text-align: center;
+    font-size: 25px;
+}
+
+.container1 {
+    top: 10px;
+    display: flex;
+    height: 150px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    align-items: start;
+    border-radius: 20px;
+    flex-wrap: nowrap;
+}
+
+.container2 {
+    top: 10px;
+    display: flex;
+    height: 200px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    align-items: end;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.container3 {
+    top: 10px;
+    display: flex;
+    height: 250px;
+    width: 400px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 20px;
+    flex-wrap: wrap-reverse;
+}
