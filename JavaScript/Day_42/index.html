@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <form id="myForm" class="form">
+        <header>HTML 5 Form Input Fields</header>
+        <div class="container">
+            <div class="child-container">
+                <label for="text">Enter Name</label>
+                <input type="text" id="text" name="text" placeholder="ex : Anbu " value="" required>
+                <p id="nameError" class="error"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="password">Enter Password</label>
+                <input type="password" id="password" name="pass" placeholder="ex : #######" required>
+                <p id="passwordError" class="error"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="email">Enter Email</label>
+                <input type="email" id="email" name="email" placeholder="ex : Anbu@gmail.com " required>
+                <p id="emailError" class="error"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="url">Enter Url</label>
+                <input type="url" id="url" name="url" placeholder="ex : www.google.com ">
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="phone">Enter PhoneNumber</label>
+                <input type="number" id="phone" name="phone" placeholder="ex : 0000000000 ">
+                <p id="phoneError" class="error"></p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="search">Search Input</label>
+                <input type="search" id="search" name="search" placeholder="ex : search">
+            </div>
+        </div>
+        <div class="nativeDateTime container">
+            <div class="child-container">
+                <label for="date">Date and Time</label>
+                <input type="datetime-local" id="date" name="date">
+            </div>
+        </div>
+        <div class="container">
+            <div class="child-container">
+                <label for="salary">Salary</label>
+                <input type="range" name="salary" id="salary" min="300000" max="500000" step="100" value="400000">
+                <output class="salary-input" for="salary">400000</output>
+            </div>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
