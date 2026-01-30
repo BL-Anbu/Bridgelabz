@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Employee Payroll App</h2>
+
+<div class="form-container">
+    <input type="text" id="name" placeholder="Employee Name">
+    <input type="number" id="salary" placeholder="Salary">
+
+    <select id="gender">
+        <option value="">Select Gender</option>
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+
+    <select id="department">
+        <option value="">Select Department</option>
+        <option>HR</option>
+        <option>Engineering</option>
+        <option>Sales</option>
+    </select>
+
+    <input type="date" id="startDate">
+
+    <button onclick="addEmployee()">Add Employee</button>
+    <p class="error" id="error"></p>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Gender</th>
+        <th>Department</th>
+        <th>Start Date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody id="employeeTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
