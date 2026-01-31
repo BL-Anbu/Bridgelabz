@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee Payroll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="app-header">
+    <div class="logo">EMPLOYEE <span>PAYROLL</span></div>
+    <h1>Add Employee Payroll</h1>
+</header>
+
+<main class="page">
+    <section class="form-card">
+
+        <h2>Employee Payroll Form</h2>
+
+        <!-- Name -->
+        <div class="form-row">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter employee name">
+        </div>
+
+        <!-- Profile Image -->
+        <div class="form-row">
+            <label>Profile Image</label>
+            <div class="avatar-group">
+                <label>
+                    <input type="radio" name="profile" value="pink" checked>
+                    <span class="avatar pink"></span>
+                </label>
+                <label>
+                    <input type="radio" name="profile" value="blue">
+                    <span class="avatar blue"></span>
+                </label>
+                <label>
+                    <input type="radio" name="profile" value="green">
+                    <span class="avatar green"></span>
+                </label>
+                <label>
+                    <input type="radio" name="profile" value="gray">
+                    <span class="avatar gray"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="form-row">
+            <label>Gender</label>
+            <div class="inline">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </div>
+
+        <!-- Department -->
+        <div class="form-row department">
+            <label>Department</label>
+            <div class="inline">
+                <label><input type="checkbox" value="HR"> HR</label>
+                <label><input type="checkbox" value="Sales"> Sales</label>
+                <label><input type="checkbox" value="Finance"> Finance</label>
+                <label><input type="checkbox" value="Engineer"> Engineer</label>
+                <label><input type="checkbox" value="Others"> Others</label>
+            </div>
+        </div>
+
+        <!-- Salary -->
+        <div class="form-row">
+            <label>Salary</label>
+            <select id="salary">
+                <option value="">Select Salary</option>
+                <option value="10000">₹10,000</option>
+                <option value="20000">₹20,000</option>
+                <option value="30000">₹30,000</option>
+                <option value="40000">₹40,000</option>
+            </select>
+        </div>
+
+        <!-- Start Date -->
+        <div class="form-row">
+            <label>Start Date</label>
+            <input type="date" id="startDate">
+        </div>
+
+        <!-- Notes -->
+        <div class="form-row">
+            <label>Notes</label>
+            <textarea id="notes" rows="3"></textarea>
+        </div>
+
+        <!-- Actions -->
+        <div class="form-actions">
+            <button type="button" class="btn cancel" onclick="goBackToList()">Cancel</button>
+            <button type="button" class="btn submit" onclick="saveEmployee()">Submit</button>
+            <button type="button" class="btn reset" onclick="resetForm()">Reset</button>
+        </div>
+
+    </section>
+</main>
+
+<script src="add.js"></script>
+</body>
+</html>
