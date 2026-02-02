@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+}
+
+.header {
+  background: #34495e;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-btn {
+  background: #7dbf00;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.container {
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th {
+  background: #34495e;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+  background: white;
+  border-radius: 4px;
+}
+
+.icon-btn.edit { color: #2980b9; }
+.icon-btn.delete { color: #c0392b; }
+
+.form-box {
+  width: 700px;
+  background: white;
+  padding: 25px;
+  border: 1px solid #ddd;
+}
+
+.row {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.label {
+  width: 180px;
+  font-weight: bold;
+}
+
+.field {
+  flex: 1;
+}
+
+.inline {
+  display: flex;
+  gap: 20px;
+}
+
+input {
+  padding: 6px;
+  width: 60%;
+}
+
+.actions {
+  border-bottom: none;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.submit {
+  background: #7dbf00;
+  color: white;
+}
+
+.cancel {
+  background: #ccc;
+}

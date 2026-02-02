@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h2>Employee Payroll Form</h2>
+</header>
+
+<div class="container">
+    <div class="form-box">
+
+        <div class="row">
+            <div class="label">Name</div>
+            <div class="field"><input type="text" id="name"></div>
+        </div>
+
+        <div class="row">
+            <div class="label">Salary</div>
+            <div class="field"><input type="number" id="salary"></div>
+        </div>
+
+        <div class="row">
+            <div class="label">Start Date</div>
+            <div class="field"><input type="date" id="startDate"></div>
+        </div>
+
+        <div class="row">
+            <div class="label">Gender</div>
+            <div class="field inline">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="label">Department</div>
+            <div class="field inline">
+                <label><input type="checkbox" value="HR"> HR</label>
+                <label><input type="checkbox" value="Engineering"> Engineering</label>
+                <label><input type="checkbox" value="Finance"> Finance</label>
+            </div>
+        </div>
+
+        <div class="row actions">
+            <button class="btn submit" onclick="saveEmployee()">Submit</button>
+            <button class="btn cancel" onclick="goBack()">Cancel</button>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/add.js"></script>
+</body>
+</html>
