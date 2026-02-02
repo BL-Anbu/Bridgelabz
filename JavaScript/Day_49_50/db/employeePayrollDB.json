@@ -1,0 +1,27 @@
+{
+  "employees": [
+    {
+      "id": "34c9",
+      "salary": "200000",
+      "startDate": "2026-02-17",
+      "gender": "Male",
+      "department": "HR, Engineering"
+    },
+    {
+      "id": "b12f",
+      "name": "Anbarasu A",
+      "salary": "200000",
+      "startDate": "2026-02-16",
+      "gender": "Male",
+      "department": "HR"
+    },
+    {
+      "id": "4b0f",
+      "name": "Generic H2 (Embedded)",
+      "salary": "200000",
+      "startDate": "2026-02-24",
+      "gender": "Male",
+      "department": "HR"
+    }
+  ]
+}
