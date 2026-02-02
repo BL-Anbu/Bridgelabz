@@ -1,0 +1,13 @@
+{
+  "employees": [
+    {
+      "id": "8472",
+      "name": "Anbu",
+      "gender": "Male",
+      "department": "Engineer",
+      "salary": "30000",
+      "startDate": "2026-02-01",
+      "notes": ""
+    }
+  ]
+}
